@@ -1,0 +1,87 @@
+:root {
+  --background-color: #fac4cb;
+  --dark-accent-color: #8b575c;
+}
+
+body {
+  background-image: url("./assets/watercolor.png");
+  font-family: "Roboto", sans-serif;
+  padding: 30px 15px 0px 15px;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-family: "Fugaz One", cursive;
+  padding: 5px;
+  font-size: 2rem;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.photoContainer {
+  /* background-color: #fff2df; */
+  width: 25%;
+  min-width: 300px;
+  margin: auto;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.score {
+  font-size: 1.25rem;
+}
+
+.contentContainer {
+  height: 60vh;
+}
+
+.arrowIcon {
+  position: fixed;
+  right: 90px;
+  color: black;
+  border: 5px solid white;
+  background-color: #fff2df;
+  border-radius: 15px;
+}
+
+.newIcon {
+  position: fixed;
+  left: 80px;
+  color: black;
+  border: 5px solid white;
+  background-color: #fff2df;
+  border-radius: 15px;
+}
+
+.dogImage {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  border-radius: 15px;
+  border: 20px solid #fff2df;
+}
+
+.multipleChoice {
+  border-radius: 15px;
+  background-color: #fff2df;
+  color: black;
+  border: 5px solid;
+  border-color: white;
+  text-align: center;
+  margin: 5px 10px;
+  /* width: 40%; */
+  min-width: 300px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.errorMessage {
+  margin: 0;
+}
+
+#signature {
+  margin: 30px 10px 5px 10px;
+  text-align: center;
+  z-index: -1;
+}

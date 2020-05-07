@@ -11,4 +11,4 @@ in-development
 - [Number Game](https://sophie-tsai.github.io/Number-Game/)
 - [To-Do List](https://sophie-tsai.github.io/To-Do-List/)
 - [Timer](https://sophie-tsai.github.io/Timer/)
-- [Motivational-Quote-Generator](https://sophie-tsai.github.io/Random-Quote-Machine/)
+- [Motivational Quote Generator](https://sophie-tsai.github.io/Random-Quote-Machine/)

@@ -1,14 +1,11 @@
-import breeds from "../breedsData";
+import breeds from "../data/breedsData";
 
 const fullBreedNames = configureBreedNames();
 
 function retrieveBreedName(data) {
   const { message } = data;
   const end = message.lastIndexOf("/");
-  let breedName = message
-    .split("")
-    .slice(30, end)
-    .join("");
+  let breedName = message.split("").slice(30, end).join("");
   return breedName;
 }
 
@@ -16,11 +13,11 @@ function configureBreedNames() {
   const keyBreeds = Object.keys(breeds);
   const fullBreedNameArr = [];
 
-  keyBreeds.forEach(props => {
+  keyBreeds.forEach((props) => {
     const subBreedNames = breeds[props];
     let propName = props;
     if (subBreedNames.length >= 1) {
-      subBreedNames.forEach(name =>
+      subBreedNames.forEach((name) =>
         fullBreedNameArr.push(`${name} ${propName}`)
       );
     } else {
@@ -44,8 +41,8 @@ function handleNameSwap(breedName) {
 function fetchDoggo() {
   const dogPromise = fetch("https://dog.ceo/api/breeds/image/random");
   return dogPromise
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       // Breed work
       let correctBreedName = retrieveBreedName(data);
       correctBreedName = handleNameSwap(correctBreedName);
@@ -55,7 +52,7 @@ function fetchDoggo() {
       return {
         correctBreedName: correctBreedName,
         image: data.message,
-        multipleChoiceAnswers: updatedChoices
+        multipleChoiceAnswers: updatedChoices,
       };
     });
 }
@@ -81,8 +78,8 @@ function getMultiChoiceAnswers(correctBreedName) {
 
   // Convert set to array of dog objects
   const multipleChoiceArray = Array.from(multipleChoicesSet);
-  const multipleChoiceArrayOfObjects = multipleChoiceArray.map(breedName => ({
-    breed: breedName
+  const multipleChoiceArrayOfObjects = multipleChoiceArray.map((breedName) => ({
+    breed: breedName,
   }));
 
   // Shuffle
