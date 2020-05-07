@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Switch, Link } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 // import AnswerContainer from "./AnswerContainer";
 // import { FaArrowRight } from "react-icons/fa";
 // import { IconContext } from "react-icons";
@@ -7,11 +7,19 @@ import { Router, Switch, Link } from "react-router-dom";
 // import * as DogAPi from "./utils/dogApi";
 import "./App.css";
 import StartPage from "./components/StartPage/StartPage";
+import GamePage from "./components/GamePage/GamePage";
 
 function App() {
   return (
-    <div>
-      <StartPage />
+    <div className="page-container">
+      <Switch>
+        <Route exact path="/Dog-Breed-Quiz">
+          <StartPage />
+        </Route>
+        <Route exact path="/game">
+          <GamePage />
+        </Route>
+      </Switch>
     </div>
   );
 }
