@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="page-container">
       <Switch>
-        <Route exact path="/Dog-Breed-Quiz">
+        <Route exact path="/">
           <StartPage />
         </Route>
         <Route exact path="/game">

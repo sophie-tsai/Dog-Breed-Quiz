@@ -1,13 +1,9 @@
 /* TYPOGRAPHY */
 
-.title {
-  margin-bottom: 7rem;
-}
-
 .title-text {
   text-align: center;
   font-family: "Fugaz One", cursive;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   color: var(--text-color);
 }
 
@@ -16,18 +12,22 @@
 .start-button {
   border: none;
   font-family: "Fugaz One", cursive;
-  padding: 1rem 2rem;
+  padding: 0.75em 1.25em;
   border-radius: 5px;
-  font-size: 2rem;
+  font-size: 1.25rem;
   background: var(--text-color);
   color: var(--light-accent-color);
+  outline: none;
 }
 
-.start-button:focus,
 .start-button:hover {
   background-image: url("../../assets/halftone-yellow.png");
   background-size: 700px;
   color: var(--text-color);
+  outline: none;
+}
+
+.start-button:focus {
   outline: none;
 }
 
@@ -36,8 +36,53 @@
 .start-page-container {
   background-color: var(--light-accent-color);
   border-radius: 5px;
-  height: 90vh;
-  padding: 8rem;
+
+  height: 94vh;
+  margin: 3vh;
+  padding: 1em;
 }
 
-/* MEDIA QUERIES */
+.start-page-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 92%;
+}
+
+/* MISC */
+
+.nav-bar {
+  text-align: right;
+  height: 8%;
+}
+
+.trophy-icon {
+  color: var(--text-color);
+  text-shadow: 5px 5px;
+}
+
+.trophy-icon:hover {
+  color: var(--background-color);
+}
+
+.trophy-icon:active {
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 
+*
+MEDIA QUERIES
+*
+*/
+
+@media (min-width: 400px) {
+  .title-text {
+    font-size: calc(3rem + 1.25vw);
+  }
+
+  .start-button {
+    font-size: calc(1.5rem + 0.4vw);
+  }
+}
