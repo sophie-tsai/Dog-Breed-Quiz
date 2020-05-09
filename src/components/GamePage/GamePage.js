@@ -8,10 +8,12 @@ import "./GamePage.css";
 
 function GamePage() {
   const [image, setImage] = useState("");
+  const [imageLoaded, setImageLoaded] = useState(false);
   const [breed, setBreed] = useState("");
   const [multipleChoiceAnswers, setMultipleChoiceAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const [questionNumber, setQuestionNumber] = useState(1);
+  const [wasChoiceSelected, setWasChoiceSelected] = useState(false);
   const errorMsg = "Oops, something went wrong! :-(";
   const homeIcon = (
     <FontAwesomeIcon icon={faHome} size="3x" className="nav-icon" />
@@ -39,9 +41,9 @@ function GamePage() {
   }
 
   function handleArrowClick() {
-    // event.preventDefault();
     if (questionNumber <= 9) {
       setQuestionNumber((prevNumber) => prevNumber + 1);
+      setWasChoiceSelected(false);
       getDoggoData();
     }
   }
@@ -53,6 +55,12 @@ function GamePage() {
   useEffect(() => {
     getDoggoData();
   }, []);
+
+  // useEffect(() => {
+  //   if (image) {
+  //     setImageLoaded(true);
+  //   }
+  // }, [image]);
 
   return (
     <div className="page-container">
@@ -67,13 +75,17 @@ function GamePage() {
           <img className="dog-image" src={image} alt="random dog" />
         </div>
         <div className="answer-container">
+          {/* {imageLoaded && ( */}
           <AnswerContainer
             data={{
               breed: breed,
               multipleChoiceAnswers: multipleChoiceAnswers,
+              wasChoiceSelected: wasChoiceSelected,
+              setWasChoiceSelected: setWasChoiceSelected,
             }}
             incrementScore={increment}
           />
+          {/* )} */}
         </div>
         <div>{arrowIcon}</div>
       </div>
@@ -83,39 +95,12 @@ function GamePage() {
 
 ////////////////////////////////////////////
 
-// class App extends React.Component {
-// constructor() {
-//   super();
-//   this.state = {
-//     image: "",
-//     breed: "",
-//     err: "",
-//     multipleChoiceAnswers: [],
-//     score: 0,
-//     questionNumber: 1,
-//   };
-
-// this.error = this.error.bind(this);
-// this.increment = this.increment.bind(this);
-// this.getDoggoData = this.getDoggoData.bind(this);
-// this.handleNewGame = this.handleNewGame.bind(this);
-// this.handleArrowClick = this.handleArrowClick.bind(this);
-// }
-
-// componentDidMount() {
-//   this.getDoggoData();
-// }
-
 // handleNewGame() {
 //   this.setState({
 //     questionNumber: 1,
 //     score: 0,
 //   });
 //   this.getDoggoData();
-// }
-
-// error() {
-//   this.setState({ err: "Oops, something went wrong! :-(" });
 // }
 
 //   render() {

@@ -32,6 +32,8 @@
 .arrow-icon {
   cursor: pointer;
   color: var(--text-color);
+  /* margin-left: 0.5em; */
+  /* background: red; */
 }
 
 .arrow-icon:hover {
@@ -43,3 +45,9 @@
   outline: none;
   cursor: pointer;
 }
+/* 
+@media (max-width: 400px) {
+  .game-page-main {
+    flex-direction: column;
+  }
+} */
