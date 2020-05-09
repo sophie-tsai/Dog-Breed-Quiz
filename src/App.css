@@ -31,19 +31,12 @@ body {
   padding: 15px;
 }
 
-.contentContainer {
+/* .contentContainer {
   height: 60vh;
 }
+ */
 
-/* .arrowIcon {
-  position: fixed;
-  right: 90px;
-  color: black;
-  border: 5px solid white;
-  background-color: #fff2df;
-  border-radius: 15px;
-}
-
+/*
 .newIcon {
   position: fixed;
   left: 80px;
@@ -52,20 +45,6 @@ body {
   background-color: #fff2df;
   border-radius: 15px;
 } */
-
-.multipleChoice {
-  border-radius: 15px;
-  background-color: #fff2df;
-  color: black;
-  border: 5px solid;
-  border-color: white;
-  text-align: center;
-  margin: 5px 10px;
-  /* width: 40%; */
-  min-width: 300px;
-  padding: 5px;
-  font-size: 20px;
-}
 
 .errorMessage {
   margin: 0;

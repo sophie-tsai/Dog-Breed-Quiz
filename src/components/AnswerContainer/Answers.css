@@ -1,0 +1,27 @@
+.multiple-choice {
+  border-radius: 15px;
+  color: var(--light-accent-color);
+  background: var(--text-color);
+  font-family: "Fugaz One", cursive;
+  border: none;
+  text-align: center;
+  margin: 5px;
+  min-width: 15em;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.multiple-choice:hover {
+  color: var(--text-color);
+  background-image: url("../../assets/halftone-yellow.png");
+  background-size: 700px;
+}
+
+.multiple-choice:focus,
+.multiple-choice:active {
+  outline: none;
+}
+
+.answer-container {
+  margin: 1rem;
+}

@@ -1,17 +1,18 @@
 import React from "react";
 
 function AnswerChoices(props) {
-  // console.log(props);
-  // const borderColor = {
-  //   borderColor: props.borderColor,
-  // };
+  const { handleChoice } = props;
+  console.log(props);
+  const borderColor = {
+    borderColor: props.borderColor,
+  };
 
   return (
     <div className="text-center">
       <button
-        className="multipleChoice"
-        onClick={(event) => props.handleChoice(event, props.text)}
-        // style={borderColor}
+        className="multiple-choice"
+        onClick={(event) => handleChoice(event, props.text)}
+        style={borderColor}
       >
         {props.text}
       </button>

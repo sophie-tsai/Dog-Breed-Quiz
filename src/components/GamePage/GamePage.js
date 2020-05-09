@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import * as DogAPI from "../../utils/dogApi";
 import AnswerContainer from "../AnswerContainer/AnswerContainer";
@@ -16,6 +16,14 @@ function GamePage() {
   const homeIcon = (
     <FontAwesomeIcon icon={faHome} size="3x" className="nav-icon" />
   );
+  const arrowIcon = (
+    <FontAwesomeIcon
+      icon={faArrowRight}
+      size="3x"
+      className="arrow-icon"
+      onClick={handleArrowClick}
+    />
+  );
 
   function getDoggoData() {
     const fetchDoggoPromise = DogAPI.fetchDoggo();
@@ -28,6 +36,14 @@ function GamePage() {
     });
 
     fetchDoggoPromise.catch(console.error(errorMsg));
+  }
+
+  function handleArrowClick() {
+    // event.preventDefault();
+    if (questionNumber <= 9) {
+      setQuestionNumber((prevNumber) => prevNumber + 1);
+      getDoggoData();
+    }
   }
 
   function increment() {
@@ -50,7 +66,7 @@ function GamePage() {
         <div className="dog-image-container">
           <img className="dog-image" src={image} alt="random dog" />
         </div>
-        <div className="AnswerContainer">
+        <div className="answer-container">
           <AnswerContainer
             data={{
               breed: breed,
@@ -59,6 +75,7 @@ function GamePage() {
             incrementScore={increment}
           />
         </div>
+        <div>{arrowIcon}</div>
       </div>
     </div>
   );
@@ -87,18 +104,6 @@ function GamePage() {
 
 // componentDidMount() {
 //   this.getDoggoData();
-// }
-
-// handleArrowClick() {
-//   // event.preventDefault();
-//   if (this.state.questionNumber <= 9) {
-//     this.setState((prevState) => {
-//       return {
-//         questionNumber: prevState.questionNumber + 1,
-//       };
-//     });
-//     this.getDoggoData();
-//   }
 // }
 
 // handleNewGame() {

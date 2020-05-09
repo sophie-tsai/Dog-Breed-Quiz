@@ -58,15 +58,14 @@
 
 .nav-icon {
   color: var(--text-color);
-  text-shadow: 5px 5px;
 }
 
 .nav-icon:hover {
-  color: var(--background-color);
+  color: var(--accent-color);
+  cursor: pointer;
 }
 
 .nav-icon:active {
-  box-shadow: none;
   outline: none;
   cursor: pointer;
 }

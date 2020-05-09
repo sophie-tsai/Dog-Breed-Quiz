@@ -9,12 +9,13 @@
 /* IMAGES */
 
 .dog-image {
-  background-color: teal;
+  background-color: var(--background-color);
   margin: auto;
   width: 400px;
   height: 400px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 15px;
+  border: 10px solid var(--text-color);
 }
 
 /* LAYOUT */
@@ -23,4 +24,22 @@
   display: flex;
   justify-content: center;
   margin: 2rem;
+  align-items: center;
+}
+
+/* MISC */
+
+.arrow-icon {
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.arrow-icon:hover {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+.arrow-icon:active {
+  outline: none;
+  cursor: pointer;
 }
