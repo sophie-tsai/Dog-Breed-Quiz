@@ -48,7 +48,7 @@ function fetchDoggo() {
       correctBreedName = handleNameSwap(correctBreedName);
 
       const updatedChoices = getMultiChoiceAnswers(correctBreedName);
-      console.log(updatedChoices);
+      // console.log(updatedChoices);
       return {
         correctBreedName: correctBreedName,
         image: data.message,

@@ -5,14 +5,12 @@ import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 function StartPage() {
-  // {<defs><pattern id="pattern"><image href=></image></pattern></defs>}
-
   const trophyIcon = (
-    <FontAwesomeIcon icon={faTrophy} size="3x" className="trophy-icon" />
+    <FontAwesomeIcon icon={faTrophy} size="3x" className="nav-icon" />
   );
 
   return (
-    <div className="start-page-container">
+    <div className="page-container">
       <nav className="nav-bar">
         <Link to="/leaderboard">{trophyIcon}</Link>
       </nav>

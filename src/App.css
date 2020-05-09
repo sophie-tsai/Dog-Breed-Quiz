@@ -22,10 +22,6 @@ body {
   color: var(--text-color);
 }
 
-.page-container {
-  /* background-color: red; */
-}
-
 .photoContainer {
   /* background-color: #fff2df; */
   width: 25%;
@@ -35,15 +31,11 @@ body {
   padding: 15px;
 }
 
-.score {
-  font-size: 1.25rem;
-}
-
 .contentContainer {
   height: 60vh;
 }
 
-.arrowIcon {
+/* .arrowIcon {
   position: fixed;
   right: 90px;
   color: black;
@@ -59,15 +51,7 @@ body {
   border: 5px solid white;
   background-color: #fff2df;
   border-radius: 15px;
-}
-
-.dogImage {
-  display: block;
-  margin: auto;
-  max-width: 100%;
-  border-radius: 15px;
-  border: 20px solid #fff2df;
-}
+} */
 
 .multipleChoice {
   border-radius: 15px;
@@ -87,8 +71,8 @@ body {
   margin: 0;
 }
 
-#signature {
+/* #signature {
   margin: 30px 10px 5px 10px;
   text-align: center;
   z-index: -1;
-}
+} */

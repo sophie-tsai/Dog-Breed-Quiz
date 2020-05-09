@@ -1,0 +1,26 @@
+/* TYPOGRAPHY */
+
+.score-info {
+  font-size: 1.25rem;
+}
+
+/* BUTTONS */
+
+/* IMAGES */
+
+.dog-image {
+  background-color: teal;
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* LAYOUT */
+
+.game-page-main {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
