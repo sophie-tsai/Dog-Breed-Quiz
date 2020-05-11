@@ -3,25 +3,26 @@ import React, { useState } from "react";
 import "./Answers.css";
 
 function AnswerContainer(props) {
-  const [userSelectedAnswer, setUserSelectedAnswer] = useState("");
-  console.log(userSelectedAnswer);
+  // const [userSelectedAnswer, setUserSelectedAnswer] = useState("");
+  // console.log(userSelectedAnswer);
 
   const {
     breed,
     multipleChoiceAnswers,
     wasChoiceSelected,
     setWasChoiceSelected,
+    setMultipleChoiceAnswers,
   } = props.data;
   const { incrementScore } = props;
 
-  function handleChoice(event, text) {
+  function handleChoice(event, selectedAnswer) {
     event.preventDefault();
     //prevents the user from choosing an answer after they've chosen one
     if (wasChoiceSelected) {
       return;
     }
-
-    showAnswerResult(text);
+    // setUserSelectedAnswer(text);
+    showAnswerResult(selectedAnswer);
   }
 
   function getUpdateMultipleChoiceAnswers(selectedChoiceText) {
@@ -31,7 +32,16 @@ function AnswerContainer(props) {
         // IF what is selected is the correct answer
         if (selectedChoiceText === breed) {
           incrementScore();
+          return {
+            backgroundColor: "green",
+            breed: selectedChoiceText,
+          };
         }
+        // If what is selected is incorrect answer
+        return {
+          backgroundColor: "red",
+          breed: selectedChoiceText,
+        };
       }
 
       // No change for all others
@@ -41,19 +51,23 @@ function AnswerContainer(props) {
 
   function showAnswerResult(id) {
     const updatedChoices = getUpdateMultipleChoiceAnswers(id);
-    // setMultipleChoiceAnswers(updatedChoices);
-    setUserSelectedAnswer(id);
+    setMultipleChoiceAnswers(updatedChoices);
+    console.log("updatedChoices", updatedChoices);
     setWasChoiceSelected(true);
   }
 
   const answerChoices = multipleChoiceAnswers.map((element) => {
-    const { breed } = element;
-    // console.log("element", element);
+    const { breed, backgroundColor } = element;
+
     return (
-      <AnswerChoices key={breed} text={breed} handleChoice={handleChoice} />
+      <AnswerChoices
+        key={breed}
+        text={breed}
+        handleChoice={handleChoice}
+        backgroundColor={backgroundColor}
+      />
     );
   });
-  // console.log("answer choices", answerChoices);
 
   return <div>{answerChoices}</div>;
 }
