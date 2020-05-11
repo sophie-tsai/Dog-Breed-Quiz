@@ -4,6 +4,7 @@ import "./Answers.css";
 
 function AnswerContainer(props) {
   const [userSelectedAnswer, setUserSelectedAnswer] = useState("");
+  console.log(userSelectedAnswer);
 
   const {
     breed,
@@ -46,7 +47,7 @@ function AnswerContainer(props) {
   }
 
   const answerChoices = multipleChoiceAnswers.map((element) => {
-    const { breed, borderColor } = element;
+    const { breed } = element;
     // console.log("element", element);
     return (
       <AnswerChoices key={breed} text={breed} handleChoice={handleChoice} />

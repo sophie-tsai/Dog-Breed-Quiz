@@ -2,10 +2,10 @@ import breeds from "../data/breedsData";
 
 const fullBreedNames = configureBreedNames();
 
-function retrieveBreedName(data) {
-  const { message } = data;
-  const end = message.lastIndexOf("/");
-  let breedName = message.split("").slice(30, end).join("");
+function retrieveBreedName(src) {
+  const end = src.lastIndexOf("/");
+  let breedName = src.split("").slice(30, end).join("");
+
   return breedName;
 }
 
@@ -38,23 +38,18 @@ function handleNameSwap(breedName) {
   return breedName;
 }
 
-function fetchDoggo() {
-  const dogPromise = fetch("https://dog.ceo/api/breeds/image/random");
-  return dogPromise
-    .then((response) => response.json())
-    .then((data) => {
-      // Breed work
-      let correctBreedName = retrieveBreedName(data);
-      correctBreedName = handleNameSwap(correctBreedName);
+function handleAnswerSelectionFromImage(src) {
+  let correctBreedName = retrieveBreedName(src);
 
-      const updatedChoices = getMultiChoiceAnswers(correctBreedName);
-      // console.log(updatedChoices);
-      return {
-        correctBreedName: correctBreedName,
-        image: data.message,
-        multipleChoiceAnswers: updatedChoices,
-      };
-    });
+  correctBreedName = handleNameSwap(correctBreedName);
+
+  const updatedChoices = getMultiChoiceAnswers(correctBreedName);
+
+  return {
+    correctBreedName: correctBreedName,
+
+    multipleChoiceAnswers: updatedChoices,
+  };
 }
 
 function getRandomDog() {
@@ -87,4 +82,9 @@ function getMultiChoiceAnswers(correctBreedName) {
   return multipleChoiceArrayOfObjects;
 }
 
-export { retrieveBreedName, configureBreedNames, handleNameSwap, fetchDoggo };
+export {
+  retrieveBreedName,
+  configureBreedNames,
+  handleNameSwap,
+  handleAnswerSelectionFromImage,
+};

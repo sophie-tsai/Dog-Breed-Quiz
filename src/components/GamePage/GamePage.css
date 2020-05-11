@@ -9,7 +9,7 @@
 /* IMAGES */
 
 .dog-image {
-  background-color: var(--background-color);
+  background-color: var(--text-color);
   margin: auto;
   width: 400px;
   height: 400px;

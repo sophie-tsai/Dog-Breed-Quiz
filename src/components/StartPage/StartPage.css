@@ -18,6 +18,7 @@
   background: var(--text-color);
   color: var(--light-accent-color);
   outline: none;
+  cursor: pointer;
 }
 
 .start-button:hover {

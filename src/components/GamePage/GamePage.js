@@ -6,17 +6,29 @@ import * as DogAPI from "../../utils/dogApi";
 import AnswerContainer from "../AnswerContainer/AnswerContainer";
 import "./GamePage.css";
 
-function GamePage() {
+function GamePage(props) {
+  //the array of 10 preloaded dog images
+  const { dogImages, setResetGame } = props;
+
+  // console.log(props);
+
+  //the single image
   const [image, setImage] = useState("");
-  const [imageLoaded, setImageLoaded] = useState(false);
   const [breed, setBreed] = useState("");
   const [multipleChoiceAnswers, setMultipleChoiceAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [wasChoiceSelected, setWasChoiceSelected] = useState(false);
+  const [arrayIndex, setArrayIndex] = useState(0);
   const errorMsg = "Oops, something went wrong! :-(";
+
   const homeIcon = (
-    <FontAwesomeIcon icon={faHome} size="3x" className="nav-icon" />
+    <FontAwesomeIcon
+      icon={faHome}
+      size="3x"
+      className="nav-icon"
+      onClick={handleHomeClick}
+    />
   );
   const arrowIcon = (
     <FontAwesomeIcon
@@ -28,20 +40,21 @@ function GamePage() {
   );
 
   function getDoggoData() {
-    const fetchDoggoPromise = DogAPI.fetchDoggo();
+    setArrayIndex((prevIndex) => prevIndex + 1);
+    const currentDog = dogImages[arrayIndex].src;
 
-    fetchDoggoPromise.then((data) => {
-      const { correctBreedName, image, multipleChoiceAnswers } = data;
-      setImage(image);
-      setBreed(correctBreedName);
-      setMultipleChoiceAnswers(multipleChoiceAnswers);
-    });
+    const dogData = DogAPI.handleAnswerSelectionFromImage(currentDog);
+    setImage(currentDog);
+    setBreed(dogData.correctBreedName);
+    setMultipleChoiceAnswers(dogData.multipleChoiceAnswers);
+  }
 
-    fetchDoggoPromise.catch(console.error(errorMsg));
+  function handleHomeClick() {
+    setResetGame(true);
   }
 
   function handleArrowClick() {
-    if (questionNumber <= 9) {
+    if (questionNumber < 10) {
       setQuestionNumber((prevNumber) => prevNumber + 1);
       setWasChoiceSelected(false);
       getDoggoData();
@@ -56,12 +69,6 @@ function GamePage() {
     getDoggoData();
   }, []);
 
-  // useEffect(() => {
-  //   if (image) {
-  //     setImageLoaded(true);
-  //   }
-  // }, [image]);
-
   return (
     <div className="page-container">
       <nav className="nav-bar">
@@ -75,7 +82,6 @@ function GamePage() {
           <img className="dog-image" src={image} alt="random dog" />
         </div>
         <div className="answer-container">
-          {/* {imageLoaded && ( */}
           <AnswerContainer
             data={{
               breed: breed,
@@ -85,66 +91,11 @@ function GamePage() {
             }}
             incrementScore={increment}
           />
-          {/* )} */}
         </div>
         <div>{arrowIcon}</div>
       </div>
     </div>
   );
 }
-
-////////////////////////////////////////////
-
-// handleNewGame() {
-//   this.setState({
-//     questionNumber: 1,
-//     score: 0,
-//   });
-//   this.getDoggoData();
-// }
-
-//   render() {
-//     return (
-//       <div>
-//         {/* <span className="score">
-//           Score: {this.state.score} - Round {this.state.questionNumber}
-//         </span> */}
-
-//         <div className="container-fluid mt-3">
-//           <div className="row justify-content-center align-items-center contentContainer">
-//             <div className="col-lg-4">
-//               {this.state.err.length !== 0 ? <p>{this.state.err}</p> : null}
-//               <img className="dogImage" src={this.state.image} />
-//             </div>
-
-//             <div className="multipleChoiceContainer col-lg-3">
-//               {/* <AnswerContainer
-//                 data={{
-//                   breed: this.state.breed,
-//                   multipleChoiceAnswers: this.state.multipleChoiceAnswers,
-//                   incrementScore: this.increment,
-//                 }}
-//               /> */}
-//             </div>
-//             <button className="arrowIcon" onClick={this.handleArrowClick}>
-//               {/* <IconContext.Provider value={{ size: "2em" }}>
-//                 <FaArrowRight />
-//               </IconContext.Provider> */}
-//             </button>
-//             <button className="newIcon" onClick={this.handleNewGame}>
-//               {/* <IconContext.Provider value={{ size: "2.5em" }}>
-//                 <MdFiberNew />
-//               </IconContext.Provider> */}
-//             </button>
-//             <br />
-//           </div>
-//         </div>
-//         {/* <p id="signature" class="fixed-bottom">
-//           created by Sophie Tsai.
-//         </p> */}
-//       </div>
-//     );
-//   }
-// }
 
 export default GamePage;

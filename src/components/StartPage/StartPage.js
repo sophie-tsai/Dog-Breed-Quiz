@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-function StartPage() {
+function StartPage(props) {
+  const { imagesLoaded } = props;
   const trophyIcon = (
     <FontAwesomeIcon icon={faTrophy} size="3x" className="nav-icon" />
   );
@@ -22,7 +23,13 @@ function StartPage() {
         </div>
         <div className="start-CTA">
           <Link to="/game">
-            <button className="start-button">start</button>
+            {imagesLoaded ? (
+              <button className="start-button">start</button>
+            ) : (
+              <button className="start-button" disabled>
+                loading...
+              </button>
+            )}
           </Link>
         </div>
       </section>
