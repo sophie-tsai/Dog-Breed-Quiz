@@ -10,7 +10,9 @@ function AnswerChoices(props) {
   return (
     <div className="text-center">
       <button
-        className="multiple-choice"
+        className={
+          backgroundColor.backgroundColor ? `correct-choice` : `multiple-choice`
+        }
         onClick={(event) => handleChoice(event, props.text)}
         style={backgroundColor}
       >

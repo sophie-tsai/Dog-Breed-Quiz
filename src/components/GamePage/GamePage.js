@@ -9,15 +9,12 @@ import "./GamePage.css";
 function GamePage(props) {
   //the array of 10 preloaded dog images
   const { dogImages, setResetGame } = props;
-  console.log(dogImages);
-
-  // console.log(props);
 
   //the single image
   const [image, setImage] = useState("");
   const [breed, setBreed] = useState("");
   const [multipleChoiceAnswers, setMultipleChoiceAnswers] = useState([]);
-  console.log("multiplechoice", multipleChoiceAnswers);
+
   const [score, setScore] = useState(0);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [wasChoiceSelected, setWasChoiceSelected] = useState(false);
@@ -59,7 +56,6 @@ function GamePage(props) {
     if (questionNumber < 10) {
       setQuestionNumber((prevNumber) => prevNumber + 1);
       setWasChoiceSelected(false);
-      getDoggoData();
     }
   }
 
@@ -69,7 +65,7 @@ function GamePage(props) {
 
   useEffect(() => {
     getDoggoData();
-  }, []);
+  }, [questionNumber]);
 
   return (
     <div className="page-container">

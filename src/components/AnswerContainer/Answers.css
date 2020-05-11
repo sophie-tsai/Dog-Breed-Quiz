@@ -1,4 +1,5 @@
-.multiple-choice {
+.multiple-choice,
+.correct-choice {
   border-radius: 15px;
   color: var(--light-accent-color);
   background: var(--text-color);
@@ -11,7 +12,6 @@
   font-size: 1.5rem;
 }
 
-.multiple-choice:visited,
 .multiple-choice:hover {
   color: var(--text-color);
   background-image: url("../../assets/halftone-yellow.png");
@@ -25,4 +25,31 @@
 
 .answer-container {
   margin: 0.75em;
+}
+
+/* 
+*
+MEDIA QUERIES
+*
+*/
+
+@media (max-width: 900px) {
+  .multiple-choice,
+  .correct-choice {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-height: 750px) and (max-width: 700px) {
+  .multiple-choice,
+  .correct-choice {
+    font-size: 1rem;
+  }
+}
+
+@media (max-height: 575px) and (max-width: 700px) {
+  .multiple-choice,
+  .correct-choice {
+    font-size: 0.75rem;
+  }
 }

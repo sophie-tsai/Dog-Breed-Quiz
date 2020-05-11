@@ -52,7 +52,7 @@ function AnswerContainer(props) {
   function showAnswerResult(id) {
     const updatedChoices = getUpdateMultipleChoiceAnswers(id);
     setMultipleChoiceAnswers(updatedChoices);
-    console.log("updatedChoices", updatedChoices);
+
     setWasChoiceSelected(true);
   }
 

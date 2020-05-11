@@ -11,8 +11,8 @@
 .dog-image {
   background-color: var(--text-color);
   margin: auto;
-  width: 400px;
-  height: 400px;
+  width: 25rem;
+  height: 25rem;
   object-fit: cover;
   border-radius: 15px;
   border: 10px solid var(--text-color);
@@ -32,8 +32,7 @@
 .arrow-icon {
   cursor: pointer;
   color: var(--text-color);
-  /* margin-left: 0.5em; */
-  /* background: red; */
+  font-size: 4rem;
 }
 
 .arrow-icon:hover {
@@ -45,9 +44,59 @@
   outline: none;
   cursor: pointer;
 }
+
 /* 
-@media (max-width: 400px) {
+*
+MEDIA QUERIES
+*
+*/
+
+@media (max-width: 910px) {
+  .dog-image {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .arrow-icon,
+  .nav-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 700px) {
   .game-page-main {
     flex-direction: column;
+    margin: 1rem;
   }
-} */
+}
+
+@media (max-height: 750px) and (max-width: 700px) {
+  .dog-image {
+    width: 15rem;
+    height: 15rem;
+  }
+  .score-info {
+    font-size: 1.1rem;
+  }
+
+  .arrow-icon,
+  .nav-icon {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-height: 575px) and (max-width: 700px) {
+  .dog-image {
+    width: 13rem;
+    height: 13rem;
+  }
+
+  .score-info {
+    font-size: 0.9rem;
+  }
+
+  .arrow-icon,
+  .nav-icon {
+    font-size: 1.9rem;
+  }
+}
