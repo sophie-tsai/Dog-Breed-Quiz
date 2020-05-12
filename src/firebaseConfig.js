@@ -1,16 +1,19 @@
-import firebase from "firebase/app";
+import firebase from "firebase";
+import "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: `${process.env.REACT_APP_FIREBASE_API_KEY}`,
-  authDomain: "dog-breed-quiz-98cd5.firebaseapp.com",
-  databaseURL: "https://dog-breed-quiz-98cd5.firebaseio.com",
-  projectId: "dog-breed-quiz-98cd5",
-  storageBucket: "dog-breed-quiz-98cd5.appspot.com",
-  messagingSenderId: "1023298340457",
-  appId: "1:1023298340457:web:b39bfeb529d356801304f8",
-  measurementId: "G-R3DS7GK47K",
+  authDomain: `${process.env.REACT_APP_AUTH_DOMAIN}`,
+  databaseURL: `${process.env.REACT_APP_DATABASE_URL}`,
+  projectId: `${process.env.REACT_APP_PROJECT_ID}`,
+  storageBucket: `${process.env.REACT_APP_STORAGE_BUCKET}`,
+  messagingSenderId: `${process.env.REACT_APP_MESSAGING_SENDER_ID}`,
+  appId: `${process.env.REACT_APP_APP_ID}`,
+  measurementId: `${process.env.REACT_APP_MEASUREMENT_ID}`,
 };
 
 firebase.initializeApp(firebaseConfig);
+
+export const firestore = firebase.firestore();
 
 export default firebase;

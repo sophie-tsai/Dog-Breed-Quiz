@@ -6,8 +6,6 @@ import GamePage from "./components/GamePage/GamePage";
 import Leaderboard from "./components/Leaderboard/Leaderboard";
 import preloadTenDogs from "./utils/preloadingApi";
 
-console.log(process.env.REACT_APP_FIREBASE_API_KEY);
-
 function App() {
   const [dogImages, setDogImages] = useState([]);
   const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -19,7 +17,7 @@ function App() {
     selectedDogImages.then((value) => setDogImages(value));
     setResetGame(false);
 
-    return () => selectedDogImages;
+    return () => selectedDogImages();
   }, [resetGame]);
 
   useEffect(() => {

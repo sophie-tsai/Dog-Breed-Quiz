@@ -5,7 +5,6 @@ function AnswerChoices(props) {
   const backgroundColor = {
     backgroundColor: props.backgroundColor,
   };
-  console.log(backgroundColor);
 
   return (
     <div className="text-center">

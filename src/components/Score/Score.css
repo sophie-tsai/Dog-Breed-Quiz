@@ -7,11 +7,23 @@
   color: var(--text-color);
 }
 
+.final-score-name {
+  font-family: "Fugaz One", cursive;
+  border: none;
+  background: var(--light-accent-color);
+  width: 75%;
+  border-bottom: 10px var(--text-color) solid;
+  font-size: 4rem;
+  text-align: center;
+  outline: none;
+}
+
 /* LAYOUT */
 
 .score-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 80vh;
 }

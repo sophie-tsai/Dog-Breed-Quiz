@@ -1,0 +1,36 @@
+/* TYPOGRAPHY */
+
+.high-score-single {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.high-score-name,
+.high-score-score {
+  font-family: "Fugaz One", cursive;
+  font-size: calc(1.75rem + 0.2vw);
+}
+
+/* LAYOUT */
+
+.leaderboard-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vh;
+}
+
+/* 
+*
+MEDIA QUERIES
+*
+*/
+
+@media (max-width: 600px) {
+  .high-score-name,
+  .high-score-score {
+    font-size: calc(1.5rem + 0.2vw);
+  }
+}
