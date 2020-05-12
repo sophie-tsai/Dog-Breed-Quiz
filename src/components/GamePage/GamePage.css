@@ -51,7 +51,14 @@ MEDIA QUERIES
 *
 */
 
-@media (max-width: 910px) {
+@media (min-width: 1900px) {
+  .dog-image {
+    width: 28rem;
+    height: 28rem;
+  }
+}
+
+@media (max-width: 950px) {
   .dog-image {
     width: 18rem;
     height: 18rem;
@@ -63,14 +70,14 @@ MEDIA QUERIES
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 725px) {
   .game-page-main {
     flex-direction: column;
     margin: 1rem;
   }
 }
 
-@media (max-height: 750px) and (max-width: 700px) {
+@media (max-height: 750px) and (max-width: 725px) {
   .dog-image {
     width: 15rem;
     height: 15rem;
@@ -85,7 +92,7 @@ MEDIA QUERIES
   }
 }
 
-@media (max-height: 575px) and (max-width: 700px) {
+@media (max-height: 575px) and (max-width: 725px) {
   .dog-image {
     width: 13rem;
     height: 13rem;

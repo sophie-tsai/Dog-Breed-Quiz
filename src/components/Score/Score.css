@@ -1,0 +1,17 @@
+/* TYPOGRAPHY */
+
+.final-score {
+  text-align: center;
+  font-family: "Fugaz One", cursive;
+  font-size: 5rem;
+  color: var(--text-color);
+}
+
+/* LAYOUT */
+
+.score-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}

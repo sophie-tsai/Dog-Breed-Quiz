@@ -1,11 +1,8 @@
 import AnswerChoices from "./AnswerChoices";
-import React, { useState } from "react";
+import React from "react";
 import "./Answers.css";
 
 function AnswerContainer(props) {
-  // const [userSelectedAnswer, setUserSelectedAnswer] = useState("");
-  // console.log(userSelectedAnswer);
-
   const {
     breed,
     multipleChoiceAnswers,

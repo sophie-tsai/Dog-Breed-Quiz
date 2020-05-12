@@ -10,6 +10,7 @@
   min-width: 15em;
   padding: 0.5rem;
   font-size: 1.5rem;
+  outline: none;
 }
 
 .multiple-choice:hover {
@@ -19,7 +20,9 @@
 }
 
 .multiple-choice:focus,
-.multiple-choice:active {
+.multiple-choice:active,
+.correct-choice:focus,
+.correct-choice:active {
   outline: none;
 }
 
@@ -33,21 +36,28 @@ MEDIA QUERIES
 *
 */
 
-@media (max-width: 900px) {
+@media (min-width: 1900px) {
+  .multiple-choice,
+  .correct-choice {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 950px) {
   .multiple-choice,
   .correct-choice {
     font-size: 1.1rem;
   }
 }
 
-@media (max-height: 750px) and (max-width: 700px) {
+@media (max-height: 750px) and (max-width: 725px) {
   .multiple-choice,
   .correct-choice {
     font-size: 1rem;
   }
 }
 
-@media (max-height: 575px) and (max-width: 700px) {
+@media (max-height: 575px) and (max-width: 725px) {
   .multiple-choice,
   .correct-choice {
     font-size: 0.75rem;

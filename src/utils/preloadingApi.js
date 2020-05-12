@@ -5,7 +5,6 @@ async function preloadTenDogs() {
       try {
         const response = await fetch("https://dog.ceo/api/breeds/image/random");
         const data = await response.json();
-        // dogImage.src = data.message;
         dogPromiseArray.push(data);
       } catch (error) {
         console.error(error);
