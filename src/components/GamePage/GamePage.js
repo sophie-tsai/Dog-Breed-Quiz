@@ -8,8 +8,14 @@ import Game from "./Game";
 import "./GamePage.css";
 
 function GamePage(props) {
-  //the array of 10 preloaded dog images
-  const { dogImages, setResetGame } = props;
+  const {
+    dogImages,
+    handleHomeClick,
+    setResetGame,
+    setEndTime,
+    startTime,
+    endTime,
+  } = props;
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
 
@@ -22,17 +28,13 @@ function GamePage(props) {
     />
   );
 
-  function handleHomeClick() {
-    setResetGame(true);
-  }
-
   return (
     <div className="page-container">
       <nav className="nav-bar">
         <Link to="/">{homeIcon}</Link>
       </nav>
       {gameOver ? (
-        <Score score={score} />
+        <Score score={score} startTime={startTime} endTime={endTime} />
       ) : (
         <Game
           setGameOver={setGameOver}
@@ -40,6 +42,7 @@ function GamePage(props) {
           dogImages={dogImages}
           score={score}
           setScore={setScore}
+          setEndTime={setEndTime}
         />
       )}
     </div>

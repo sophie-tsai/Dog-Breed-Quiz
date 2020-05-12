@@ -5,10 +5,16 @@ import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 function StartPage(props) {
-  const { imagesLoaded } = props;
+  const { imagesLoaded, setStartTime } = props;
   const trophyIcon = (
     <FontAwesomeIcon icon={faTrophy} size="3x" className="nav-icon" />
   );
+
+  function handleStartTime() {
+    const date = new Date();
+    const startTimeStamp = date.getTime();
+    setStartTime(startTimeStamp);
+  }
 
   return (
     <div className="page-container">
@@ -24,7 +30,9 @@ function StartPage(props) {
         <div className="start-CTA">
           <Link to="/game">
             {imagesLoaded ? (
-              <button className="start-button">start</button>
+              <button className="start-button" onClick={handleStartTime}>
+                start
+              </button>
             ) : (
               <button className="start-button" disabled>
                 loading...

@@ -6,7 +6,7 @@ import scoreRef from "../../firebaseRef";
 import "./Score.css";
 
 function Score(props) {
-  const { score } = props;
+  const { score, endTime, startTime } = props;
   const [finalScore, setFinalScore] = useState(0);
   const [playerName, setPlayerName] = useState("");
 
@@ -25,7 +25,10 @@ function Score(props) {
   }
 
   useEffect(() => {
-    setFinalScore(score * 100);
+    const scoreSubtractTime = Math.floor(
+      score * 100 - (endTime - startTime) / 1000
+    );
+    setFinalScore(scoreSubtractTime);
   }, []);
 
   return (

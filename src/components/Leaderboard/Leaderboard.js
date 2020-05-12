@@ -6,11 +6,12 @@ import "./Leaderboard.css";
 import scoreRef from "../../firebaseRef";
 import HighScore from "./HighScore";
 
-function Leaderboard() {
+function Leaderboard(props) {
+  const { handleHomeClick } = props;
   const [highScores, setHighScores] = useState([]);
 
   useEffect(() => {
-    scoreRef
+    const unsubscribe = scoreRef
       .orderBy("score", "desc")
       .limit(10)
       .onSnapshot((querySnapshot) => {
@@ -20,6 +21,8 @@ function Leaderboard() {
         });
         setHighScores(scores);
       });
+
+    return () => unsubscribe();
   }, []);
 
   const displayHighScores = highScores.map((element) => (
@@ -27,7 +30,12 @@ function Leaderboard() {
   ));
 
   const homeIcon = (
-    <FontAwesomeIcon icon={faHome} size="3x" className="nav-icon" />
+    <FontAwesomeIcon
+      icon={faHome}
+      size="3x"
+      className="nav-icon"
+      onClick={handleHomeClick}
+    />
   );
   return (
     <div className="page-container">

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 function Game(props) {
-  const { setGameOver, dogImages, score, setScore } = props;
+  const { setGameOver, dogImages, score, setScore, setEndTime } = props;
 
   //the single image
   const [image, setImage] = useState("");
@@ -38,6 +38,9 @@ function Game(props) {
   function handleArrowClick() {
     if (questionNumber === 10) {
       setGameOver(true);
+      const date = new Date();
+      const endTimeStamp = date.getTime();
+      setEndTime(endTimeStamp);
       return;
     }
     if (questionNumber < 10) {

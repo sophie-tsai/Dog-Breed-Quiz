@@ -10,15 +10,19 @@ function App() {
   const [dogImages, setDogImages] = useState([]);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [resetGame, setResetGame] = useState(false);
+  const [startTime, setStartTime] = useState(0);
+  const [endTime, setEndTime] = useState(0);
 
   useEffect(() => {
     setImagesLoaded(false);
     const selectedDogImages = preloadTenDogs();
     selectedDogImages.then((value) => setDogImages(value));
     setResetGame(false);
-
-    return () => selectedDogImages();
   }, [resetGame]);
+
+  function handleHomeClick() {
+    setResetGame(true);
+  }
 
   useEffect(() => {
     if (dogImages.length === 10) {
@@ -30,7 +34,7 @@ function App() {
     <div>
       <Switch>
         <Route exact path="/">
-          <StartPage imagesLoaded={imagesLoaded} />
+          <StartPage imagesLoaded={imagesLoaded} setStartTime={setStartTime} />
         </Route>
         <Route exact path="/game">
           {imagesLoaded && (
@@ -38,11 +42,15 @@ function App() {
               dogImages={dogImages}
               imagesLoaded={imagesLoaded}
               setResetGame={setResetGame}
+              handleHomeClick={handleHomeClick}
+              setEndTime={setEndTime}
+              startTime={startTime}
+              endTime={endTime}
             />
           )}
         </Route>
         <Route exact path="/leaderboard">
-          <Leaderboard />
+          <Leaderboard handleHomeClick={handleHomeClick} />
         </Route>
       </Switch>
     </div>
