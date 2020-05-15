@@ -17,8 +17,9 @@ function Score(props) {
 
   function submitHighScore() {
     if (playerName) {
+      const name = playerName.toLowerCase();
       scoreRef.add({
-        name: playerName,
+        name: name,
         score: finalScore,
       });
     }
@@ -28,6 +29,12 @@ function Score(props) {
     const scoreSubtractTime = Math.floor(
       score * 100 - (endTime - startTime) / 1000
     );
+
+    if (scoreSubtractTime < 0) {
+      setFinalScore(0);
+      return;
+    }
+
     setFinalScore(scoreSubtractTime);
   }, []);
 
