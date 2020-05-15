@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Dog-Breed-Quiz/static/css/main.9dafb0cc.chunk.css",
-    "main.js": "/Dog-Breed-Quiz/static/js/main.428d846a.chunk.js",
-    "main.js.map": "/Dog-Breed-Quiz/static/js/main.428d846a.chunk.js.map",
-    "runtime-main.js": "/Dog-Breed-Quiz/static/js/runtime-main.5ce3ac0a.js",
-    "runtime-main.js.map": "/Dog-Breed-Quiz/static/js/runtime-main.5ce3ac0a.js.map",
-    "static/js/2.a585ba3f.chunk.js": "/Dog-Breed-Quiz/static/js/2.a585ba3f.chunk.js",
-    "static/js/2.a585ba3f.chunk.js.map": "/Dog-Breed-Quiz/static/js/2.a585ba3f.chunk.js.map",
-    "index.html": "/Dog-Breed-Quiz/index.html",
-    "precache-manifest.2f21e78b1fde4cf2a954d4981665e37e.js": "/Dog-Breed-Quiz/precache-manifest.2f21e78b1fde4cf2a954d4981665e37e.js",
-    "service-worker.js": "/Dog-Breed-Quiz/service-worker.js",
-    "static/css/main.9dafb0cc.chunk.css.map": "/Dog-Breed-Quiz/static/css/main.9dafb0cc.chunk.css.map",
-    "static/js/2.a585ba3f.chunk.js.LICENSE.txt": "/Dog-Breed-Quiz/static/js/2.a585ba3f.chunk.js.LICENSE.txt",
-    "static/media/style.css": "/Dog-Breed-Quiz/static/media/background.16f8797d.jpg"
+    "main.css": "/dog-breed-quiz/static/css/main.e60bce85.chunk.css",
+    "main.js": "/dog-breed-quiz/static/js/main.beadc92b.chunk.js",
+    "main.js.map": "/dog-breed-quiz/static/js/main.beadc92b.chunk.js.map",
+    "runtime-main.js": "/dog-breed-quiz/static/js/runtime-main.fd1d5256.js",
+    "runtime-main.js.map": "/dog-breed-quiz/static/js/runtime-main.fd1d5256.js.map",
+    "static/js/2.4061f47f.chunk.js": "/dog-breed-quiz/static/js/2.4061f47f.chunk.js",
+    "static/js/2.4061f47f.chunk.js.map": "/dog-breed-quiz/static/js/2.4061f47f.chunk.js.map",
+    "index.html": "/dog-breed-quiz/index.html",
+    "precache-manifest.e25ee77011def913dfc20a08941705a4.js": "/dog-breed-quiz/precache-manifest.e25ee77011def913dfc20a08941705a4.js",
+    "service-worker.js": "/dog-breed-quiz/service-worker.js",
+    "static/css/main.e60bce85.chunk.css.map": "/dog-breed-quiz/static/css/main.e60bce85.chunk.css.map",
+    "static/js/2.4061f47f.chunk.js.LICENSE.txt": "/dog-breed-quiz/static/js/2.4061f47f.chunk.js.LICENSE.txt",
+    "static/media/Answers.css": "/dog-breed-quiz/static/media/halftone-yellow.ce75830e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5ce3ac0a.js",
-    "static/js/2.a585ba3f.chunk.js",
-    "static/css/main.9dafb0cc.chunk.css",
-    "static/js/main.428d846a.chunk.js"
+    "static/js/runtime-main.fd1d5256.js",
+    "static/js/2.4061f47f.chunk.js",
+    "static/css/main.e60bce85.chunk.css",
+    "static/js/main.beadc92b.chunk.js"
   ]
 }
