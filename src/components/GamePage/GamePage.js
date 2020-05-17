@@ -31,7 +31,7 @@ function GamePage(props) {
   return (
     <div className="page-container">
       <nav className="nav-bar">
-        <Link to="/">{homeIcon}</Link>
+        <Link to="/Dog-Breed-Quiz/">{homeIcon}</Link>
       </nav>
       {gameOver ? (
         <Score score={score} startTime={startTime} endTime={endTime} />

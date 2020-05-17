@@ -19,7 +19,7 @@ function StartPage(props) {
   return (
     <div className="page-container">
       <nav className="nav-bar">
-        <Link to="/leaderboard">{trophyIcon}</Link>
+        <Link to="/Dog-Breed-Quiz/leaderboard">{trophyIcon}</Link>
       </nav>
 
       <section className="start-page-main">
@@ -28,7 +28,7 @@ function StartPage(props) {
           <h1 className="title-text">dog breeds?</h1>
         </div>
         <div className="start-CTA">
-          <Link to="/game">
+          <Link to="/Dog-Breed-Quiz/game">
             {imagesLoaded ? (
               <button className="start-button" onClick={handleStartTime}>
                 start
