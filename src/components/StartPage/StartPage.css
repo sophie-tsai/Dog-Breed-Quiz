@@ -22,7 +22,7 @@
 }
 
 .start-button:hover {
-  background-image: url(./assets/halftone-yellow.png);
+  background-image: url(../../assets/halftone-yellow.png);
   background-size: 700px;
   color: var(--text-color);
   outline: none;
