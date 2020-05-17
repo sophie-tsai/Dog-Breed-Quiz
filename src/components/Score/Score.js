@@ -51,7 +51,7 @@ function Score(props) {
           required
         ></input>
         {playerName && (
-          <Link to="/leaderboard">
+          <Link to="/Dog-Breed-Quiz/leaderboard">
             <FontAwesomeIcon
               icon={faArrowRight}
               size="3x"
