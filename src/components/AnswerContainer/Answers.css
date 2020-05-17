@@ -15,7 +15,7 @@
 
 .multiple-choice:hover {
   color: var(--text-color);
-  background-image: url("../../assets/halftone-yellow.png");
+  background-image: url(./assets/halftone-yellow.png);
   background-size: 700px;
 }
 
