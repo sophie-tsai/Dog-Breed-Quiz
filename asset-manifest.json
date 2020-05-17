@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/Dog-Breed-Quiz/static/css/main.73f85a17.chunk.css",
-    "main.js": "/Dog-Breed-Quiz/static/js/main.beadc92b.chunk.js",
-    "main.js.map": "/Dog-Breed-Quiz/static/js/main.beadc92b.chunk.js.map",
+    "main.css": "/Dog-Breed-Quiz/static/css/main.cf3681c6.chunk.css",
+    "main.js": "/Dog-Breed-Quiz/static/js/main.4b826d8e.chunk.js",
+    "main.js.map": "/Dog-Breed-Quiz/static/js/main.4b826d8e.chunk.js.map",
     "runtime-main.js": "/Dog-Breed-Quiz/static/js/runtime-main.5ce3ac0a.js",
     "runtime-main.js.map": "/Dog-Breed-Quiz/static/js/runtime-main.5ce3ac0a.js.map",
     "static/js/2.2ae77c42.chunk.js": "/Dog-Breed-Quiz/static/js/2.2ae77c42.chunk.js",
     "static/js/2.2ae77c42.chunk.js.map": "/Dog-Breed-Quiz/static/js/2.2ae77c42.chunk.js.map",
     "index.html": "/Dog-Breed-Quiz/index.html",
-    "precache-manifest.b800bc6221396c9ce0d78bacc6fda802.js": "/Dog-Breed-Quiz/precache-manifest.b800bc6221396c9ce0d78bacc6fda802.js",
+    "precache-manifest.825589a6dd1f63b6a004c26e385e1cc5.js": "/Dog-Breed-Quiz/precache-manifest.825589a6dd1f63b6a004c26e385e1cc5.js",
     "service-worker.js": "/Dog-Breed-Quiz/service-worker.js",
-    "static/css/main.73f85a17.chunk.css.map": "/Dog-Breed-Quiz/static/css/main.73f85a17.chunk.css.map",
-    "static/js/2.2ae77c42.chunk.js.LICENSE.txt": "/Dog-Breed-Quiz/static/js/2.2ae77c42.chunk.js.LICENSE.txt"
+    "static/css/main.cf3681c6.chunk.css.map": "/Dog-Breed-Quiz/static/css/main.cf3681c6.chunk.css.map",
+    "static/js/2.2ae77c42.chunk.js.LICENSE.txt": "/Dog-Breed-Quiz/static/js/2.2ae77c42.chunk.js.LICENSE.txt",
+    "static/media/Answers.css": "/Dog-Breed-Quiz/static/media/halftone-yellow.ce75830e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5ce3ac0a.js",
     "static/js/2.2ae77c42.chunk.js",
-    "static/css/main.73f85a17.chunk.css",
-    "static/js/main.beadc92b.chunk.js"
+    "static/css/main.cf3681c6.chunk.css",
+    "static/js/main.4b826d8e.chunk.js"
   ]
 }

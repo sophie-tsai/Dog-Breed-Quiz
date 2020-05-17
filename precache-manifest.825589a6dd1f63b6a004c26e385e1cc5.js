@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4e10e94f09e85fbfe96351b4153c97b2",
+    "revision": "c90544c0ca673aa34b9ccb90f44b6595",
     "url": "/Dog-Breed-Quiz/index.html"
   },
   {
-    "revision": "24a006ff942d94eeabc7",
-    "url": "/Dog-Breed-Quiz/static/css/main.73f85a17.chunk.css"
+    "revision": "5fcb908fc788a30bec25",
+    "url": "/Dog-Breed-Quiz/static/css/main.cf3681c6.chunk.css"
   },
   {
     "revision": "5a7cd841c393d32b4275",
@@ -16,11 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Dog-Breed-Quiz/static/js/2.2ae77c42.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "24a006ff942d94eeabc7",
-    "url": "/Dog-Breed-Quiz/static/js/main.beadc92b.chunk.js"
+    "revision": "5fcb908fc788a30bec25",
+    "url": "/Dog-Breed-Quiz/static/js/main.4b826d8e.chunk.js"
   },
   {
     "revision": "e4c15e06dab0ee0a7d2a",
     "url": "/Dog-Breed-Quiz/static/js/runtime-main.5ce3ac0a.js"
+  },
+  {
+    "revision": "ce75830ee1528db648d4fbb8706e7189",
+    "url": "/Dog-Breed-Quiz/static/media/halftone-yellow.ce75830e.png"
   }
 ]);
