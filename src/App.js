@@ -33,10 +33,10 @@ function App() {
   return (
     <div>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/Dog-Breed-Quiz/">
           <StartPage imagesLoaded={imagesLoaded} setStartTime={setStartTime} />
         </Route>
-        <Route exact path="/game">
+        <Route exact path="/Dog-Breed-Quiz/game">
           {imagesLoaded && (
             <GamePage
               dogImages={dogImages}
@@ -49,7 +49,7 @@ function App() {
             />
           )}
         </Route>
-        <Route exact path="/leaderboard">
+        <Route exact path="/Dog-Breed-Quiz/leaderboard">
           <Leaderboard handleHomeClick={handleHomeClick} />
         </Route>
       </Switch>
