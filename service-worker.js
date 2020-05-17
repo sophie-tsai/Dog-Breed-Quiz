@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Dog-Breed-Quiz/precache-manifest.a0ca5d8290c8154696f84b6839d5c586.js"
+  "/Dog-Breed-Quiz/precache-manifest.fe40c50be25254f30b86ab5001cd2cfe.js"
 );
 
 self.addEventListener('message', (event) => {
