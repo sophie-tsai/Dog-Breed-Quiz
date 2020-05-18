@@ -8,6 +8,7 @@ import preloadTenDogs from "./utils/preloadingApi";
 import Signature from "./Signature";
 
 function App() {
+  // TODO test change
   const [dogImages, setDogImages] = useState([]);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [resetGame, setResetGame] = useState(false);
