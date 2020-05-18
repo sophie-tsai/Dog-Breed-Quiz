@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Dog-Breed-Quiz/static/css/main.8e1b3eb4.chunk.css",
+    "main.css": "/Dog-Breed-Quiz/static/css/main.f66b4d23.chunk.css",
     "main.js": "/Dog-Breed-Quiz/static/js/main.cafcdee6.chunk.js",
     "main.js.map": "/Dog-Breed-Quiz/static/js/main.cafcdee6.chunk.js.map",
     "runtime-main.js": "/Dog-Breed-Quiz/static/js/runtime-main.5ce3ac0a.js",
@@ -8,16 +8,16 @@
     "static/js/2.2ae77c42.chunk.js": "/Dog-Breed-Quiz/static/js/2.2ae77c42.chunk.js",
     "static/js/2.2ae77c42.chunk.js.map": "/Dog-Breed-Quiz/static/js/2.2ae77c42.chunk.js.map",
     "index.html": "/Dog-Breed-Quiz/index.html",
-    "precache-manifest.0531dc53bff753613586695288ca83c1.js": "/Dog-Breed-Quiz/precache-manifest.0531dc53bff753613586695288ca83c1.js",
+    "precache-manifest.43cc2049d77e4c124b69af5519dafa12.js": "/Dog-Breed-Quiz/precache-manifest.43cc2049d77e4c124b69af5519dafa12.js",
     "service-worker.js": "/Dog-Breed-Quiz/service-worker.js",
-    "static/css/main.8e1b3eb4.chunk.css.map": "/Dog-Breed-Quiz/static/css/main.8e1b3eb4.chunk.css.map",
+    "static/css/main.f66b4d23.chunk.css.map": "/Dog-Breed-Quiz/static/css/main.f66b4d23.chunk.css.map",
     "static/js/2.2ae77c42.chunk.js.LICENSE.txt": "/Dog-Breed-Quiz/static/js/2.2ae77c42.chunk.js.LICENSE.txt",
     "static/media/Answers.css": "/Dog-Breed-Quiz/static/media/halftone-yellow.ce75830e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5ce3ac0a.js",
     "static/js/2.2ae77c42.chunk.js",
-    "static/css/main.8e1b3eb4.chunk.css",
+    "static/css/main.f66b4d23.chunk.css",
     "static/js/main.cafcdee6.chunk.js"
   ]
 }

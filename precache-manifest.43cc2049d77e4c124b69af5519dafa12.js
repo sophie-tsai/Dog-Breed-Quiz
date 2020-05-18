@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4b381510bffc79adfad067081c66d9f9",
+    "revision": "5c1c8b7e25dca5a7e0f8244eb2f0f505",
     "url": "/Dog-Breed-Quiz/index.html"
   },
   {
-    "revision": "486653ad4823f2b362a7",
-    "url": "/Dog-Breed-Quiz/static/css/main.8e1b3eb4.chunk.css"
+    "revision": "9ecb0729adfaf88c4dfd",
+    "url": "/Dog-Breed-Quiz/static/css/main.f66b4d23.chunk.css"
   },
   {
     "revision": "5a7cd841c393d32b4275",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Dog-Breed-Quiz/static/js/2.2ae77c42.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "486653ad4823f2b362a7",
+    "revision": "9ecb0729adfaf88c4dfd",
     "url": "/Dog-Breed-Quiz/static/js/main.cafcdee6.chunk.js"
   },
   {
