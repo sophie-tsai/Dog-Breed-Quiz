@@ -5,6 +5,7 @@ import StartPage from "./components/StartPage/StartPage";
 import GamePage from "./components/GamePage/GamePage";
 import Leaderboard from "./components/Leaderboard/Leaderboard";
 import preloadTenDogs from "./utils/preloadingApi";
+import Signature from "./Signature";
 
 function App() {
   const [dogImages, setDogImages] = useState([]);
@@ -53,6 +54,7 @@ function App() {
           <Leaderboard handleHomeClick={handleHomeClick} />
         </Route>
       </Switch>
+      <Signature />
     </div>
   );
 }

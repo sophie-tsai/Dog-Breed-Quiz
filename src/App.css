@@ -35,8 +35,10 @@ body {
   margin: 0;
 }
 
-/* #signature {
-  margin: 30px 10px 5px 10px;
+.signature {
+  text-decoration: none;
   text-align: center;
-  z-index: -1;
-} */
+  color: var(--text-color);
+
+  font-size: 0.8rem;
+}
