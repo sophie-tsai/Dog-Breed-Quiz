@@ -1,6 +1,6 @@
 # Dog-Breed-Quiz
 
-in-development
+Check it out live [here](https://sophie-tsai.github.io/Dog-Breed-Quiz/)!
 
 **Check out other projects:**
 
